@@ -26,6 +26,7 @@ class MainActivity : ComponentActivity() {
                 var appBarTitle by rememberSaveable { mutableStateOf("Home") }
 
                 Scaffold(
+
                     topBar = {
                         TopAppBar(
                             title = { Text(text = appBarTitle) }
@@ -34,7 +35,7 @@ class MainActivity : ComponentActivity() {
                 ) { paddingValues ->
                     HomeScreen(
                         onTitleChange = { newTitle -> appBarTitle = newTitle },
-                        modifier = Modifier.padding(paddingValues).padding(16.dp)
+                        modifier = Modifier.padding(paddingValues).padding(16.dp),
                     )
                 }
             }

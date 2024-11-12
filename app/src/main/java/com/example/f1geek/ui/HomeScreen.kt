@@ -9,7 +9,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.f1geek.model.seedDriverStore
 import com.example.f1geek.model.seedTeamStore
 import com.example.f1geek.model.seedCircuitStore
 
@@ -30,7 +29,7 @@ fun HomeScreen(
         if (showButtons) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(16.dp)
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 Button(onClick = {
                     showButtons = false
@@ -38,8 +37,10 @@ fun HomeScreen(
                     showTeams = false
                     showCircuits = false
                     onTitleChange("Drivers")
-                }) {
-                    Text("Drivers")
+
+                }
+                ) {
+                    Text("Drivers", )
                 }
 
                 Button(onClick = {
@@ -77,8 +78,8 @@ fun HomeScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         when {
-            showDrivers -> DriverList(drivers = seedDriverStore().drivers, modifier = Modifier.fillMaxWidth())
-            showTeams -> TeamList(teams = seedTeamStore().teams, modifier = Modifier.fillMaxWidth())
+            showDrivers -> DriverListScreen(modifier = Modifier.fillMaxWidth())
+            showTeams -> TeamListScreen(modifier = Modifier.fillMaxWidth())
             showCircuits -> CircuitList(circuits = seedCircuitStore().circuits, modifier = Modifier.fillMaxWidth())
         }
     }
