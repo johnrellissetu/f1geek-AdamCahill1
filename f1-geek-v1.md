@@ -65,29 +65,29 @@ classDiagram
 
 ## User Interface - 40%
 
-# Home Page
+### Home Page
 ![img.png](img.png)
 
-# Drivers List
+### Drivers List
 ![img_1.png](img_1.png)
 
-# Driver Details
+### Driver Details
 ![img_2.png](img_2.png)
 
-# Team List 
+### Team List 
 ![img_3.png](img_3.png)
 
-# Team Details 
+### Team Details 
 ![img_4.png](img_4.png)
 ![img_5.png](img_5.png)
 ![img_6.png](img_6.png)
 ![img_7.png](img_7.png)
 
-# Circuit List
+### Circuit List
 ![img_8.png](img_8.png)
 
-# Circuit Details
+### Circuit Details
 ![img_9.png](img_9.png)
 
-# Circuit Results
+### Circuit Results
 ![img_10.png](img_10.png)
