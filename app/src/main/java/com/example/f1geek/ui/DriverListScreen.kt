@@ -3,6 +3,7 @@ package com.example.f1geek.ui
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
@@ -58,21 +59,29 @@ fun DriverList(
             label = { Text("Search Drivers") },
             modifier = Modifier.fillMaxWidth()
         )
-
-        drivers.filter { it.getFullName().contains(filterText, ignoreCase = true) }
-            .forEachIndexed { index, driver ->
-                val backgroundColor = if (index % 2 == 0) Color.LightGray else Color.White
-                Text(
-                    text = driver.getFullName(),
-                    modifier = Modifier
-                        .background(color = backgroundColor)
-                        .fillMaxWidth()
-                        .padding(8.dp)
-                        .clickable {
-                            onDriverClick(driver)
-                        }
-                )
-            }
+        LazyColumn(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            drivers.filter { it.getFullName().contains(filterText, ignoreCase = true) }
+                .forEachIndexed { index, driver ->
+                    val backgroundColor = if (index % 2 == 0) Color.LightGray else Color.White
+                    item {
+                        Text(
+                            text = driver.getFullName(),
+                            modifier = Modifier
+                                .background(color = backgroundColor)
+                                .fillMaxWidth()
+                                .padding(8.dp)
+                                .clickable {
+                                    onDriverClick(driver)
+                                }
+                        )
+                    }
+                }
+        }
     }
 }
 

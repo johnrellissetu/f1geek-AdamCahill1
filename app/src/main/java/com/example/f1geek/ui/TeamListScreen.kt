@@ -17,6 +17,8 @@ import com.example.f1geek.model.Team
 import com.example.f1geek.model.Driver
 import com.example.f1geek.model.seedTeamStore
 import coil.compose.AsyncImage
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 
 @Composable
 fun TeamListScreen(modifier: Modifier = Modifier) {
@@ -56,20 +58,29 @@ fun TeamList(
             modifier = Modifier.fillMaxWidth()
         )
 
-        teams.filter { it.name.contains(filterText, ignoreCase = true) }
-            .forEachIndexed { index, team ->
-                val backgroundColor = if (index % 2 == 0) Color.LightGray else Color.White
-                Text(
-                    text = team.name,
-                    modifier = Modifier
-                        .background(color = backgroundColor)
-                        .fillMaxWidth()
-                        .padding(8.dp)
-                        .clickable {
-                            onTeamClick(team)
-                        }
-                )
-            }
+        LazyColumn(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            teams.filter { it.name.contains(filterText, ignoreCase = true) }
+                .forEachIndexed { index, team ->
+                    val backgroundColor = if (index % 2 == 0) Color.LightGray else Color.White
+                    item {
+                        Text(
+                            text = team.name,
+                            modifier = Modifier
+                                .background(color = backgroundColor)
+                                .fillMaxWidth()
+                                .padding(8.dp)
+                                .clickable {
+                                    onTeamClick(team)
+                                }
+                        )
+                    }
+                }
+        }
     }
 }
 
@@ -80,37 +91,45 @@ fun TeamDetail(
     onBackClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Column(
+    LazyColumn(
         modifier = modifier
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Team Details", style = typography.titleLarge)
-        Spacer(modifier = Modifier.height(16.dp))
+        item {
+            Text(text = "Team Details", style = typography.titleLarge)
+            Spacer(modifier = Modifier.height(16.dp))
 
-        Text(text = "Team Name: ${team.name}")
-        Spacer(modifier = Modifier.height(8.dp))
+            Text(text = "Team Name: ${team.name}")
+            Spacer(modifier = Modifier.height(8.dp))
+        }
 
-        Text(text = "Primary Driver:")
-        DriverInfo(driver = team.primaryDriver)
+        item {
+            Text(text = "Primary Driver:")
+            DriverInfo(driver = team.primaryDriver)
+            Spacer(modifier = Modifier.height(16.dp))
+        }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        item {
+            Text(text = "Secondary Driver:")
+            DriverInfo(driver = team.secondaryDriver)
+            Spacer(modifier = Modifier.height(16.dp))
+        }
 
-        Text(text = "Secondary Driver:")
-        DriverInfo(driver = team.secondaryDriver)
+        item {
+            Text(text = "Reserve Drivers:")
+        }
 
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Text(text = "Reserve Drivers:")
-        team.reserveDrivers.forEach { driver ->
+        items(team.reserveDrivers) { driver ->
             DriverInfo(driver = driver)
         }
 
-        Spacer(modifier = Modifier.height(24.dp))
-
-        Button(onClick = onBackClick) {
-            Text("Back")
+        item {
+            Spacer(modifier = Modifier.height(24.dp))
+            Button(onClick = onBackClick) {
+                Text("Back")
+            }
         }
     }
 }
@@ -119,7 +138,7 @@ fun TeamDetail(
 
 @Composable
 fun DriverInfo(driver: Driver, modifier: Modifier = Modifier) {
-    Column(modifier = modifier.padding(8.dp)) {
+    Column(modifier = modifier.padding(8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
         AsyncImage(
             model = driver.image,
             contentDescription = "Driver Image",
