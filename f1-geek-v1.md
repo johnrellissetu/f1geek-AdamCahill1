@@ -115,3 +115,23 @@ classDiagram
 
 ### Circuit Results
 ![img_10.png](img_10.png)
+
+## Submission details
+
+* Include a link to a youtube video, no longer than 4 minutes where you show your app working either on your phone or emulator.  You should show the driver list, team list, team detail and driver detail screens.  You must also show your tests running and passing.
+
+The lecturer will be downloading your zipped repositories from moodle so please include the following information as these will be cross references with your github classroom repo:
+
+* My UNLISTED youtube video (app and test walkthrough): https://youtu.be/3Xz6YkAYkzQ
+* My github repository (this MUST be your github classroom repo): https://github.com/johnrellissetu/f1geek-AdamCahill1
+* Have you uploaded a zip of your repo to moodle? (yes/no): Yes
+
+Note: Percentages provided above are a rough guide to the weighting of each section, the lecturer will use their discretion to adjust these as needed. If you omit a section, you will be penalised. If you do not provide a youtube video, you will be penalised. If you do not provide a github repository, you will be penalised. If you do not upload a zip of your repo to moodle it will be considered non-submission.
+
+The lecturer may call you for an interview to discuss your submission.
+
+Usage of AI/ML is not permitted in this assignment, this includes copilots, gemini, chatgpt and similar.
+
+All code must be your own, you may  use code from other sources, this includes stackoverflow, but you must reference this in your code with a comment, you may be asked to explain these. However, generative AI techniques are not permitted.
+
+The value of this submission is 30% of your overall module grade.
