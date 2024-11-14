@@ -1,5 +1,12 @@
 # F1 Geek Design - Version 1
 
+## Student Information
+
+| Field          | Value       |
+|----------------|-------------|
+| Name           | Adam Cahill |
+| Student Number | 20097733    |
+
 ## Mindmap - 10%
 
 TODO: Add your mind map as described in the assignment spec, this must be a mermaid diagram that renders in github.
@@ -23,10 +30,64 @@ TODO: Add a screenshot of your Figma design for the list of teams.
 
 ## Data Model - 20%
 
-TODO: Add the mermaid class diagram for the extended data model here, this must be a mermaid diagram that renders in github.
+```mermaid
+classDiagram
+    class Team {
+        +String name
+    }
 
-TODO: You must also actually implement the data model in kotlin in your F1 Geek app and include tests, see the previous page for details on the model.
+    class Driver {
+        +String surname
+        +String firstName
+        +String abbreviatedName
+        +Integer number
+    }
+
+    class Circuit {
+        +String name
+        +String country
+        +Double length
+        +List~Results~ results
+    }
+
+    class Results {
+        +String year
+        +String first
+        +String second
+        +String third
+    }
+
+    Team "1" --> "1" Driver: primaryDriver
+    Team "1" --> "1" Driver: secondaryDriver
+    Team "1" --> "1..*" Driver: reserveDrivers
+    Circuit "1" --> "0..*" Results: results
+```
 
 ## User Interface - 40%
 
-TODO: Add screenshots of your driver list, team list, team detail screens and driver detail screens
+* Home Page
+![img.png](img.png)
+
+* Drivers List
+![img_1.png](img_1.png)
+
+* Driver Details
+![img_2.png](img_2.png)
+
+* Team List 
+![img_3.png](img_3.png)
+
+* Team Details 
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+
+* Circuit List
+![img_8.png](img_8.png)
+
+* Circuit Details
+![img_9.png](img_9.png)
+
+* Circuit Results
+![img_10.png](img_10.png)
