@@ -48,7 +48,9 @@ mindmap
 
 ## Design - 20%
 
-TODO: Add a screenshot of your Figma design for the list of teams.
+![img_11.png](img_11.png)
+
+![img_12.png](img_12.png)
 
 ## Data Model - 20%
 
