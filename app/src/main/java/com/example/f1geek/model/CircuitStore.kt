@@ -9,8 +9,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Bahrain",
             length = 5.412,
             results = listOf(
-                Results(year = 2023, first = "Max Verstappen", second = "Sergio Perez", third = "Fernando Alonso"),
-                Results(year = 2022, first = "Charles Leclerc", second = "Carlos Sainz", third = "Lewis Hamilton")
+                Results(year = "2023", first = "Max Verstappen", second = "Sergio Perez", third = "Fernando Alonso"),
+                Results(year = "2022", first = "Charles Leclerc", second = "Carlos Sainz", third = "Lewis Hamilton")
             )
         ),
         Circuit(
@@ -18,8 +18,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Saudi Arabia",
             length = 6.174,
             results = listOf(
-                Results(year = 2023, first = "Sergio Perez", second = "Fernando Alonso", third = "George Russell"),
-                Results(year = 2022, first = "Max Verstappen", second = "Charles Leclerc", third = "Lando Norris")
+                Results(year = "2023", first = "Sergio Perez", second = "Fernando Alonso", third = "George Russell"),
+                Results(year = "2022", first = "Max Verstappen", second = "Charles Leclerc", third = "Lando Norris")
             )
         ),
         Circuit(
@@ -27,8 +27,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Australia",
             length = 5.278,
             results = listOf(
-                Results(year = 2023, first = "Lewis Hamilton", second = "Max Verstappen", third = "Oscar Piastri"),
-                Results(year = 2022, first = "George Russell", second = "Carlos Sainz", third = "Fernando Alonso")
+                Results(year = "2023", first = "Lewis Hamilton", second = "Max Verstappen", third = "Oscar Piastri"),
+                Results(year = "2022", first = "George Russell", second = "Carlos Sainz", third = "Fernando Alonso")
             )
         ),
         Circuit(
@@ -36,8 +36,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Japan",
             length = 5.807,
             results = listOf(
-                Results(year = 2023, first = "Fernando Alonso", second = "Charles Leclerc", third = "Lando Norris"),
-                Results(year = 2022, first = "Max Verstappen", second = "Sergio Perez", third = "Lewis Hamilton")
+                Results(year = "2023", first = "Fernando Alonso", second = "Charles Leclerc", third = "Lando Norris"),
+                Results(year = "2022", first = "Max Verstappen", second = "Sergio Perez", third = "Lewis Hamilton")
             )
         ),
         Circuit(
@@ -45,8 +45,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "China",
             length = 5.451,
             results = listOf(
-                Results(year = 2023, first = "Oscar Piastri", second = "Fernando Alonso", third = "Pierre Gasly"),
-                Results(year = 2022, first = "Lewis Hamilton", second = "George Russell", third = "Max Verstappen")
+                Results(year = "2023", first = "Oscar Piastri", second = "Fernando Alonso", third = "Pierre Gasly"),
+                Results(year = "2022", first = "Lewis Hamilton", second = "George Russell", third = "Max Verstappen")
             )
         ),
         Circuit(
@@ -54,8 +54,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "USA",
             length = 5.412,
             results = listOf(
-                Results(year = 2023, first = "Lando Norris", second = "Lewis Hamilton", third = "Charles Leclerc"),
-                Results(year = 2022, first = "Max Verstappen", second = "Oscar Piastri", third = "Carlos Sainz")
+                Results(year = "2023", first = "Lando Norris", second = "Lewis Hamilton", third = "Charles Leclerc"),
+                Results(year = "2022", first = "Max Verstappen", second = "Oscar Piastri", third = "Carlos Sainz")
             )
         ),
         Circuit(
@@ -63,8 +63,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Italy",
             length = 4.909,
             results = listOf(
-                Results(year = 2023, first = "Charles Leclerc", second = "Lando Norris", third = "George Russell"),
-                Results(year = 2022, first = "Lewis Hamilton", second = "Sergio Perez", third = "Fernando Alonso")
+                Results(year = "2023", first = "Charles Leclerc", second = "Lando Norris", third = "George Russell"),
+                Results(year = "2022", first = "Lewis Hamilton", second = "Sergio Perez", third = "Fernando Alonso")
             )
         ),
         Circuit(
@@ -72,8 +72,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Monaco",
             length = 3.337,
             results = listOf(
-                Results(year = 2023, first = "Max Verstappen", second = "Lewis Hamilton", third = "Carlos Sainz"),
-                Results(year = 2022, first = "Charles Leclerc", second = "George Russell", third = "Oscar Piastri")
+                Results(year = "2023", first = "Max Verstappen", second = "Lewis Hamilton", third = "Carlos Sainz"),
+                Results(year = "2022", first = "Charles Leclerc", second = "George Russell", third = "Oscar Piastri")
             )
         ),
         Circuit(
@@ -81,8 +81,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Canada",
             length = 4.361,
             results = listOf(
-                Results(year = 2023, first = "George Russell", second = "Fernando Alonso", third = "Lewis Hamilton"),
-                Results(year = 2022, first = "Max Verstappen", second = "Carlos Sainz", third = "Charles Leclerc")
+                Results(year = "2023", first = "George Russell", second = "Fernando Alonso", third = "Lewis Hamilton"),
+                Results(year = "2022", first = "Max Verstappen", second = "Carlos Sainz", third = "Charles Leclerc")
             )
         ),
         Circuit(
@@ -90,8 +90,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Spain",
             length = 4.657,
             results = listOf(
-                Results(year = 2023, first = "Carlos Sainz", second = "Charles Leclerc", third = "Fernando Alonso"),
-                Results(year = 2022, first = "Lewis Hamilton", second = "Max Verstappen", third = "Sergio Perez")
+                Results(year = "2023", first = "Carlos Sainz", second = "Charles Leclerc", third = "Fernando Alonso"),
+                Results(year = "2022", first = "Lewis Hamilton", second = "Max Verstappen", third = "Sergio Perez")
             )
         ),
         Circuit(
@@ -99,8 +99,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Austria",
             length = 4.318,
             results = listOf(
-                Results(year = 2023, first = "Max Verstappen", second = "George Russell", third = "Sergio Perez"),
-                Results(year = 2022, first = "Lando Norris", second = "Carlos Sainz", third = "Lewis Hamilton")
+                Results(year = "2023", first = "Max Verstappen", second = "George Russell", third = "Sergio Perez"),
+                Results(year = "2022", first = "Lando Norris", second = "Carlos Sainz", third = "Lewis Hamilton")
             )
         ),
         Circuit(
@@ -108,8 +108,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "England",
             length = 5.891,
             results = listOf(
-                Results(year = 2023, first = "George Russell", second = "Charles Leclerc", third = "Oscar Piastri"),
-                Results(year = 2022, first = "Max Verstappen", second = "Fernando Alonso", third = "Carlos Sainz")
+                Results(year = "2023", first = "George Russell", second = "Charles Leclerc", third = "Oscar Piastri"),
+                Results(year = "2022", first = "Max Verstappen", second = "Fernando Alonso", third = "Carlos Sainz")
             )
         ),
         Circuit(
@@ -117,8 +117,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Hungary",
             length = 4.381,
             results = listOf(
-                Results(year = 2023, first = "Charles Leclerc", second = "Lewis Hamilton", third = "George Russell"),
-                Results(year = 2022, first = "Fernando Alonso", second = "Carlos Sainz", third = "Max Verstappen")
+                Results(year = "2023", first = "Charles Leclerc", second = "Lewis Hamilton", third = "George Russell"),
+                Results(year = "2022", first = "Fernando Alonso", second = "Carlos Sainz", third = "Max Verstappen")
             )
         ),
         Circuit(
@@ -126,8 +126,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Belgium",
             length = 7.004,
             results = listOf(
-                Results(year = 2023, first = "Oscar Piastri", second = "Sergio Perez", third = "Charles Leclerc"),
-                Results(year = 2022, first = "Max Verstappen", second = "George Russell", third = "Lewis Hamilton")
+                Results(year = "2023", first = "Oscar Piastri", second = "Sergio Perez", third = "Charles Leclerc"),
+                Results(year = "2022", first = "Max Verstappen", second = "George Russell", third = "Lewis Hamilton")
             )
         ),
         Circuit(
@@ -135,8 +135,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Netherlands",
             length = 4.259,
             results = listOf(
-                Results(year = 2023, first = "Max Verstappen", second = "Charles Leclerc", third = "Oscar Piastri"),
-                Results(year = 2022, first = "Fernando Alonso", second = "Lewis Hamilton", third = "Lando Norris")
+                Results(year = "2023", first = "Max Verstappen", second = "Charles Leclerc", third = "Oscar Piastri"),
+                Results(year = "2022", first = "Fernando Alonso", second = "Lewis Hamilton", third = "Lando Norris")
             )
         ),
         Circuit(
@@ -144,8 +144,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Italy",
             length = 5.793,
             results = listOf(
-                Results(year = 2023, first = "Carlos Sainz", second = "Lando Norris", third = "Sergio Perez"),
-                Results(year = 2022, first = "Max Verstappen", second = "George Russell", third = "Lewis Hamilton")
+                Results(year = "2023", first = "Carlos Sainz", second = "Lando Norris", third = "Sergio Perez"),
+                Results(year = "2022", first = "Max Verstappen", second = "George Russell", third = "Lewis Hamilton")
             )
         ),
         Circuit(
@@ -153,8 +153,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Azerbaijan",
             length = 6.003,
             results = listOf(
-                Results(year = 2023, first = "Lewis Hamilton", second = "Carlos Sainz", third = "Oscar Piastri"),
-                Results(year = 2022, first = "Max Verstappen", second = "Fernando Alonso", third = "Charles Leclerc")
+                Results(year = "2023", first = "Lewis Hamilton", second = "Carlos Sainz", third = "Oscar Piastri"),
+                Results(year = "2022", first = "Max Verstappen", second = "Fernando Alonso", third = "Charles Leclerc")
             )
         ),
         Circuit(
@@ -162,8 +162,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Singapore",
             length = 4.94,
             results = listOf(
-                Results(year = 2023, first = "Fernando Alonso", second = "Max Verstappen", third = "Lando Norris"),
-                Results(year = 2022, first = "Lewis Hamilton", second = "Sergio Perez", third = "George Russell")
+                Results(year = "2023", first = "Fernando Alonso", second = "Max Verstappen", third = "Lando Norris"),
+                Results(year = "2022", first = "Lewis Hamilton", second = "Sergio Perez", third = "George Russell")
             )
         ),
         Circuit(
@@ -171,8 +171,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "USA",
             length = 5.513,
             results = listOf(
-                Results(year = 2023, first = "Max Verstappen", second = "Lando Norris", third = "Oscar Piastri"),
-                Results(year = 2022, first = "Carlos Sainz", second = "George Russell", third = "Lewis Hamilton")
+                Results(year = "2023", first = "Max Verstappen", second = "Lando Norris", third = "Oscar Piastri"),
+                Results(year = "2022", first = "Carlos Sainz", second = "George Russell", third = "Lewis Hamilton")
             )
         ),
         Circuit(
@@ -180,8 +180,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Mexico",
             length = 4.304,
             results = listOf(
-                Results(year = 2023, first = "George Russell", second = "Carlos Sainz", third = "Lando Norris"),
-                Results(year = 2022, first = "Max Verstappen", second = "Lewis Hamilton", third = "Fernando Alonso")
+                Results(year = "2023", first = "George Russell", second = "Carlos Sainz", third = "Lando Norris"),
+                Results(year = "2022", first = "Max Verstappen", second = "Lewis Hamilton", third = "Fernando Alonso")
             )
         ),
         Circuit(
@@ -189,8 +189,8 @@ fun seedCircuitStore(): CircuitStore {
             country = "Brazil",
             length = 4.309,
             results = listOf(
-                Results(year = 2023, first = "Charles Leclerc", second = "Fernando Alonso", third = "George Russell"),
-                Results(year = 2022, first = "Max Verstappen", second = "Carlos Sainz", third = "Lando Norris")
+                Results(year = "2023", first = "Charles Leclerc", second = "Fernando Alonso", third = "George Russell"),
+                Results(year = "2022", first = "Max Verstappen", second = "Carlos Sainz", third = "Lando Norris")
             )
         )
     )

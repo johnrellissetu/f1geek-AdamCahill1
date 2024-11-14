@@ -19,25 +19,25 @@ class DriverTests {
 
     @Test
     fun getFirstName() {
-        val driver = Driver("Charles", "LeClerc", "LEC",16)
+        val driver = Driver("Charles", "LeClerc", "LEC",16, image = "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png")
         assertEquals("Charles", driver.firstName)
     }
 
     @Test
     fun getSurname() {
-        val driver = Driver("Charles", "LeClerc", "LEC",16)
+        val driver = Driver("Charles", "LeClerc", "LEC",16, image = "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png")
         assertEquals("LeClerc", driver.surname)
     }
 
     @Test
     fun getAbbreviatedName() {
-        val driver = Driver("Charles", "LeClerc", "LEC",16)
+        val driver = Driver("Charles", "LeClerc", "LEC",16, image = "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png")
         assertEquals("LEC", driver.abbreviatedName)
     }
 
     @Test
     fun getNumber() {
-        val driver = Driver("Charles", "LeClerc", "LEC",16)
+        val driver = Driver("Charles", "LeClerc", "LEC",16, image = "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png")
         assertEquals(16, driver.number)
     }
 }

@@ -1,16 +1,19 @@
 package com.example.f1geek.ui
 
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.f1geek.model.seedTeamStore
-import com.example.f1geek.model.seedCircuitStore
+import coil.compose.AsyncImage
+
 
 @Composable
 fun HomeScreen(
@@ -22,14 +25,44 @@ fun HomeScreen(
     var showTeams by rememberSaveable { mutableStateOf(false) }
     var showCircuits by rememberSaveable { mutableStateOf(false) }
 
+
     Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color(0xFFE10600))
+                .padding(2.dp)
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                AsyncImage(
+                    //This image was taken from the official F1 website. It is not mine.
+                    model = "https://media.formula1.com/image/upload/f_auto,c_limit,w_195,q_auto/etc/designs/fom-website/images/f1_logo.svg",
+                    contentDescription = "F1 Logo",
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(end = 20.dp, start = 8.dp)
+                )
+                Text(
+                    text = "F1 App",
+                    style = typography.titleLarge,
+                    color = Color.White
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
         if (showButtons) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(16.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(50.dp),
             ) {
                 Button(onClick = {
                     showButtons = false
@@ -40,7 +73,7 @@ fun HomeScreen(
 
                 }
                 ) {
-                    Text("Drivers", )
+                    Text("Drivers")
                 }
 
                 Button(onClick = {
@@ -75,12 +108,10 @@ fun HomeScreen(
             }
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
-
         when {
             showDrivers -> DriverListScreen(modifier = Modifier.fillMaxWidth())
             showTeams -> TeamListScreen(modifier = Modifier.fillMaxWidth())
-            showCircuits -> CircuitList(circuits = seedCircuitStore().circuits, modifier = Modifier.fillMaxWidth())
+            showCircuits -> CircuitListScreen(modifier = Modifier.fillMaxWidth())
         }
     }
 }
