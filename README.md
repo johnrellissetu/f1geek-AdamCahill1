@@ -6,8 +6,6 @@ Source for the F1Geek android app.
 
 ## Student Information
 
-Hello
-
 | Field          | Value       |
 |----------------|-------------|
 | Name           | Adam Cahill |

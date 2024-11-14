@@ -15,6 +15,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import coil.compose.AsyncImage
 import com.example.f1geek.model.Circuit
 import com.example.f1geek.model.seedCircuitStore
 
@@ -108,6 +109,13 @@ fun YearList(
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Text(text = "Circuit Details", style = typography.titleLarge)
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(text = "Name: ${circuit.name}")
+        Text(text = "Country: ${circuit.country}")
+        Text(text = "Length: ${circuit.length}km")
+        Spacer(modifier = Modifier.height(16.dp))
+
         Text(text = "Select Year for ${circuit.name}", style = typography.titleLarge)
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -158,7 +166,7 @@ fun ResultDetail(
         Spacer(modifier = Modifier.height(24.dp))
 
         Button(onClick = onBackClick) {
-            Text("Back to Years")
+            Text("Back")
         }
     }
 }
