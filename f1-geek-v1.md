@@ -9,7 +9,29 @@
 
 ## Mindmap - 10%
 
-TODO: Add your mind map as described in the assignment spec, this must be a mermaid diagram that renders in github.
+```mermaid 
+mindmap
+  root((F1 Geek))
+    Drivers
+        Number
+        History
+        Stats
+    Teams
+        Cars
+        History
+    Race Tracks
+        Track Records
+        Track Features
+    Seasons
+        Races
+            Results
+            Dates
+    Personalisation
+        Follow Drivers
+    News Feed
+        Highlights
+        F1 Updates
+```
 
 ## User Stories - 10%
 
